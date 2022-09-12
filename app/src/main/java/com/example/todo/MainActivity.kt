@@ -13,7 +13,6 @@ import java.io.IOException
 import java.nio.charset.Charset
 
 class MainActivity : AppCompatActivity() {
-
     var listOfTasks = mutableListOf<String>()
     lateinit var adapter : TaskItemAdapter
 
@@ -33,10 +32,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // 1. Detect when user clicks on button
-        findViewById<Button>(R.id.button).setOnClickListener() {
-            Log.i("Caren", "User clicked on a button")
-        }
+//        // 1. Detect when user clicks on button
+////        findViewById<Button>(R.id.button).setOnClickListener() {
+////            Log.i("Caren", "User clicked on a button")
+////        }
 
         loadItems()
 
@@ -50,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         // Set up button and input field so that the user can input a task
 
         val inputTextField = findViewById<EditText>(R.id.addTaskField)
-        inputTextField.setOnClickListener() {
+        findViewById<Button>(R.id.button).setOnClickListener() {
             // 1. Grab text user as inputted into addTaskField
             val userInputtedTask = inputTextField.text.toString()
 

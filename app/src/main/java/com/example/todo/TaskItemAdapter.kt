@@ -23,14 +23,10 @@ class TaskItemAdapter(val listOfItems: List<String>,
         val contactView = inflater.inflate(android.R.layout.simple_list_item_1, parent, false)
 
         return ViewHolder(contactView)
-
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        // Get data model based on position
-
         val item = listOfItems.get(position)
-
         holder.textView.text = item
     }
 
